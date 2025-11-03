@@ -31,7 +31,7 @@ def get_info(name, cc):
                             params={"appids": game_id, "cc": cc}).json()
 
     if 'data' not in response[game_id]:
-        console.print("This game is banned in your country :exclamation:", style="bold red")
+        console.print("This game is banned in your country!", style="bold red")
         return None
     else:
         return response[game_id]['data']
@@ -61,6 +61,8 @@ def print_info(response):
 
     descriptions = [genre['description'] for genre in response['genres']]
     console.print(f"[bold violet]Genres:[/bold violet] [white]{', '.join(descriptions)}[/white]")
+    m = input("Press Enter to continue...")
+    clear_screen()
 
 if __name__ == "__main__":
     clear_screen()
