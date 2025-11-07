@@ -1,0 +1,29 @@
+QLabel {
+    color: rgb(96, 120, 161);
+    font-size:20px;
+}
+
+QWidget{
+    background: rgb(46, 44, 44);
+}
+
+QLineEdit {
+    color: white;
+    background-color: #222;
+    border-radius: 15px;
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+QLineEdit::placeholder {
+    color: gray;
+}
+
+QPushButton{
+    color: rgb(96, 120, 161);
+}
+
+QWidget #menu{
+    background-color: black;
+    color: white;
+}
