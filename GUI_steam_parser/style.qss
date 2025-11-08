@@ -1,13 +1,18 @@
-QLabel {
+QLabel#soft {
     color: rgb(96, 120, 161);
     font-size:20px;
 }
 
-QWidget{
-    background: rgb(46, 44, 44);
+QWidget#container{
+    background-color: rgba(52, 50, 50, 1);
 }
 
-QLineEdit {
+QWidget#menu{
+    background-color:rgba(50, 28, 28, 1) ;
+}
+
+QLineEdit#game_input,
+QLineEdit#currency_input {
     color: white;
     background-color: #222;
     border-radius: 15px;
@@ -19,11 +24,26 @@ QLineEdit::placeholder {
     color: gray;
 }
 
-QPushButton{
-    color: rgb(96, 120, 161);
+QPushButton#game_info_btn{
+    background-color: rgba(75, 72, 72, 1);
+    border-radius: 8px;
+    border-style: none;
+    color: #FFFFFF;    
+    font-size: 14px;
+    font-weight: 500;
+    height: 40px;
+    line-height: 20px;
+    list-style: none;
+    margin: 0;
+    outline: none;
+    padding: 10px 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: baseline;
 }
 
-QWidget #menu{
-    background-color: black;
-    color: white;
+QPushButton#game_info_btn:hover,
+QPushButton#game_info_btn:focus {
+  background-color: rgba(64, 18, 18, 1);
 }

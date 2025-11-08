@@ -4,10 +4,10 @@ from gui_ui import MainWindow
 import sys
 
 app = QApplication(sys.argv)
-
-with open("style.qss", "r") as file:
-    app.setStyleSheet(file.read())
-
 window = MainWindow()
 window.show()
+
+with open("GUI_steam_parser/style.qss", "r") as file:
+    app.setStyleSheet(file.read())
+    
 app.exec()

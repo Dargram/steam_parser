@@ -1,58 +1,60 @@
-from PyQt6.QtWidgets import (
-    QMainWindow, QLabel, QLineEdit, QPushButton,
-    QVBoxLayout, QHBoxLayout, QWidget
-)
+from PyQt6.QtWidgets import (QApplication, QMainWindow, QLabel, QLineEdit,
+                             QVBoxLayout, QHBoxLayout, QWidget, QPushButton)
 from PyQt6.QtCore import Qt
-
+import sys
 
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-
+        # === Параметри вікна ===
         self.setWindowTitle("Parsteam")
-        self.setFixedSize(600, 400)
-
-
-        self.program_label = QLabel("Software by Dargram")
-
-        self.game_input = QLineEdit()
-        self.game_input.setFixedSize(300, 30)
-        self.game_input.setPlaceholderText("Enter game name...")
-
-        self.country_input = QLineEdit()
-        self.country_input.setFixedSize(300, 30)
-        self.country_input.setPlaceholderText("Enter country's currency")
-
-        self.btn_find = QPushButton("Find game info!")
-
-
-        content_layout = QVBoxLayout()
-        content_layout.setAlignment(Qt.AlignmentFlag.AlignTop)
-        content_layout.addWidget(self.program_label, alignment=Qt.AlignmentFlag.AlignCenter)
-        content_layout.addWidget(self.game_input, alignment=Qt.AlignmentFlag.AlignCenter)
-        content_layout.addWidget(self.country_input, alignment=Qt.AlignmentFlag.AlignCenter)
-        content_layout.addWidget(self.btn_find, alignment=Qt.AlignmentFlag.AlignCenter)
-
-        content_widget = QWidget()
-        content_widget.setLayout(content_layout)
-
-
-        self.menu_btn_find = QPushButton("Game info")
-        self.menu_btn_find.setFixedSize(100, 40)
-
+        self.setFixedSize(500,500)
+        
+        
+        # === Створення ліній ===
+        main_layout = QHBoxLayout() # головна лінія
         menu_layout = QVBoxLayout()
-        menu_layout.addWidget(self.menu_btn_find)
-        menu_layout.addStretch()
+        content_layout = QVBoxLayout()
 
-        menu_widget = QWidget()
-        menu_widget.setLayout(menu_layout)
-        menu_widget.setObjectName("menu")
+        # === Створення віджетів ===
+        self.program_label = QLabel("Software by Dargram")
+        self.program_label.setObjectName("soft")
+        
+        self.game_input = QLineEdit()
+        self.game_input.setFixedSize(300,30)
+        self.game_input.setPlaceholderText("Enter game name...")
+        self.game_input.setObjectName("game_input")
+        
+        self.currency_input = QLineEdit()
+        self.currency_input.setFixedSize(300,30)
+        self.currency_input.setPlaceholderText("Enter country's currency...(ua, de, it)")
+        self.currency_input.setObjectName("currency_input")
+        
+        
+        self.game_info = QPushButton("Find info")
+        self.game_info.setObjectName("game_info_btn")
 
-
-        main_layout = QHBoxLayout()
-        main_layout.addWidget(menu_widget)
-        main_layout.addWidget(content_widget, stretch=1)
-
+        # === Створення контейнерів ===
         container = QWidget()
         container.setLayout(main_layout)
+        container.setObjectName("container")
+        menu = QWidget()
+        menu.setLayout(menu_layout)
+        menu.setObjectName("menu")
+        content = QWidget()
+        content.setLayout(content_layout)
+        
+        
+        main_layout.setAlignment(Qt.AlignmentFlag.AlignTop)
+        
+        
+        main_layout.addWidget(menu)
+        main_layout.addWidget(content)
+
+        # === Під'єднання віджетів до ліній ===
+        content_layout.addWidget(self.program_label, alignment=Qt.AlignmentFlag.AlignCenter)
+        content_layout.addWidget(self.game_input, alignment=Qt.AlignmentFlag.AlignCenter)
+        content_layout.addWidget(self.currency_input, alignment=Qt.AlignmentFlag.AlignCenter)
+        menu_layout.addWidget(self.game_info, alignment=Qt.AlignmentFlag.AlignCenter)
+        
         self.setCentralWidget(container)
