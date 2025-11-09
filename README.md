@@ -22,7 +22,7 @@ The current command-line interface (CLI) version supports:
 *   Outputting core data in a user-friendly format
 *   Repeated searches without restarting the program
 
-## GUI Version (In Development) 🚧
+## GUI Version
 
 **Actively working on a graphical user interface version based on PyQt6.**
 
