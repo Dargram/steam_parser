@@ -1,4 +1,6 @@
 QLabel#soft {
+    margin-top: 20px;
+    margin-bottom: 10px;
     color: #a0a0a0;
     font-size: 20px;
     font-weight: bold;
@@ -70,4 +72,83 @@ QPushButton#find_btn:pressed {
 QPushButton#game_info_btn:focus,
 QPushButton#find_btn:focus {
     border-color: #808080;
+}
+
+QLabel#soft {
+    color: #a0a0a0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+QWidget#container {
+    background-color: #2a2a2a;
+}
+
+QLineEdit#game_input,
+QLineEdit#currency_input {
+    color: #e0e0e0;
+    background-color: #333333;
+    border: 1px solid #555555;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 5px 10px;
+}
+
+QLineEdit#game_input:focus,
+QLineEdit#currency_input:focus {
+    border-color: #777777;
+    background-color: #3a3a3a;
+}
+
+QLineEdit::placeholder {
+    color: #888888;
+}
+
+QPushButton#game_info_btn{
+    background-color: #404040;
+    border: 1px solid #606060;
+    border-radius: 5px;
+    color: #d0d0d0;
+    font-size: 14px;
+    padding: 8px 16px;
+    margin: 20px 0;
+    height: 50px;
+    width: 100px;
+}
+
+QPushButton#find_btn {
+    background-color: #404040;
+    border: 1px solid #606060;
+    border-radius: 5px;
+    color: #d0d0d0;
+    font-size: 14px;
+    padding: 8px 16px;
+    margin: 5px 0;
+}
+
+QPushButton#game_info_btn:hover,
+QPushButton#find_btn:hover {
+    background-color: #505050;
+    border-color: #707070;
+}
+
+QPushButton#game_info_btn:pressed,
+QPushButton#find_btn:pressed {
+    background-color: #303030;
+}
+
+QPushButton#game_info_btn:focus,
+QPushButton#find_btn:focus {
+    border-color: #808080;
+}
+
+QTextEdit#result_display {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border: 1px solid #444444;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    margin: 10px;
 }
