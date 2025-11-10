@@ -14,7 +14,7 @@ This project provides a convenient tool for fetching up-to-date game data from t
 
 It is ideal for market analysis, discount tracking, and personal use.
 
-## Functionality (CLI)
+## Functionality (CLI version)
 
 The current command-line interface (CLI) version supports:
 *   Searching for games by title
@@ -22,11 +22,10 @@ The current command-line interface (CLI) version supports:
 *   Outputting core data in a user-friendly format
 *   Repeated searches without restarting the program
 
-## GUI Version
+## Functionality (GUI version)
 
 **Actively working on a graphical user interface version based on PyQt6.**
 
-Planned improvements:
 *   **Extended functionality** compared to the CLI version
 *   **User-friendly visual interface** for comfortable interaction
 *   **Improved error handling** and intuitive controls
